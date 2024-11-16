@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Adda</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: black;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./Images/loh.jpg);
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+}
+.hold{
+    height: 500px;
+    width: 500px;
+    margin-top: 100px;
+    border-radius: 20px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+    -webkit-box-shadow: -1px 1px 15px 5px rgba(0,242,255,1);
+    -moz-box-shadow: -1px 1px 15px 5px rgba(0,242,255,1);
+    box-shadow: -1px 1px 15px 5px rgba(0,242,255,1);
+    /* background-color: red; */
+}
+
+.main{
+    height: 500px;
+    width: 500px;
+    /* margin: 94px auto; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition:all ease-in-out 1s;
+    position: absolute;
+    z-index: 2;
+    /* background-color: rgb(49, 49, 49); */
+    background-image:linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./Images/majestic-mountain-peak-tranquil-winter-landscape-generated-by-ai.jpg);
+    background-size: 100% 100%;
+    /* box-shadow:
+    inset -2px -2px 7px rgba(1, 255, 255, 0.7),
+    inset 2px 2px 7px rgba(1, 255, 255, 0.7),
+    inset -2px -2px 7px rgba(1, 255, 255, 0.7),
+    inset 2px 2px 7px rgba(1, 255, 255, 0.7); */
+}
+.main h1{
+    font-size: 40px;
+    font-weight: 900;
+    color:#01ffffb3;
+}
+.first_input{
+    height: 50px;
+    width: 95%;
+    margin-top: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: yellowgreen; */
+}
+.first_input input{
+    color: white;
+    font-size: 17px;
+}
+.icon1{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    /* background-color: rebeccapurple; */
+}
+.first_input input{
+    height: 100%;
+    width: 90%;
+    padding-left: 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid rgba(1, 255, 255, 0.702);
+}
+
+
+.second_input{
+    height: 50px;
+    width: 95%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: yellowgreen; */
+}
+.icon2{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    /* background-color: rebeccapurple; */
+}
+.second_input input{
+    height: 100%;
+    width: 90%;
+    padding-left: 15px;
+    border-radius: 10px;
+    font-size: 17px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgba(1, 255, 255, 0.702);
+}
+.main p{
+    height: 28px;
+    width: 95%;
+    line-height: 28px;
+    /* background-color: red; */
+    text-align: right;
+    color: rgba(1, 255, 255, 0.702);
+}
+.a{
+    height: 50px;
+    width: 150px;
+    font-size: 17px;
+    margin-top: 20px;
+    font-weight: 900;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(251, 251, 251);
+    color: rgb(48, 48, 48);
+    background-color: rgb(3, 173, 173);
+    /* padding-left: px;  */
+    /* width: 20px; */
+}
+.main span{
+    margin-top: 20px;
+    color: whitesmoke;
+    transition: 1s;
+}
+.main h4{
+    color: rgb(3, 173, 173);
+    transition: 1s;
+    display: inline-block;
+}
+
+.main h4:hover{
+    font-size: 20px;
+}
+button{
+    height: 24px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    cursor:pointer;
+    transition: .2s;
+    background: transparent;
+    color: #01ffffb3;
+}
+.main button:hover {
+    font-size: 23px;
+}
+/* ========================================================== */
+
+.main2{
+    height: 500px;
+    width: 500px;
+    /* margin: 94px auto; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    transform: rotateY(180deg);
+    opacity: 0;
+    background-image:linear-gradient(to top,rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./Images/majestic-mountain-peak-tranquil-winter-landscape-generated-by-ai.jpg);
+    background-size: 100% 100%;
+    /* transition: all 1s; */
+    /* display: none; */
+    /* transition-delay:.2s; */
+    /* background-color: rgb(49, 49, 49); */
+}
+
+.main2 h1{
+    font-size: 40px;
+    font-weight: 900;
+    color: rgba(1, 255, 255, 0.702);
+}
+.third_input{
+    height: 50px;
+    width: 85%;
+    margin-top: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: yellowgreen; */
+}
+.icon1{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    /* background-color: rebeccapurple; */
+}
+.third_input input{
+    height: 100%;
+    width: 90%;
+    padding-left: 15px;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 17px;
+    color: white;
+    border: 2px solid rgba(1, 255, 255, 0.702);
+}
+
+
+.fourth_input{
+    height: 50px;
+    width: 85%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: yellowgreen; */
+}
+.icon2{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    /* background-color: rebeccapurple; */
+}
+.fourth_input input{
+    height: 100%;
+    width: 90%;
+    border: 2px solid rgb(134, 127, 4);
+    padding-left: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 17px;
+    background-color: transparent;
+    border: 2px solid rgba(1, 255, 255, 0.702);
+}
+.main2 p{
+    height: 28px;
+    width: 95%;
+    line-height: 28px;
+    /* background-color: red; */
+    text-align: right;
+    color: rgb(134, 127, 4);
+}
+.main2 span{
+    margin-top: 20px;
+    color: gray;
+    transition: 1s;
+}
+.main2 h4{
+    color: rgb(134, 127, 4);
+    transition: 1s;
+    display: inline-block;
+}
+
+.main2 h4:hover{
+    font-size: 20px;
+}
+.main2 .a{
+    height: 50px;
+    width: 150px;
+    font-size: 17px;
+    margin-top: 20px;
+    font-weight: 900;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(251, 251, 251);
+    color: rgb(48, 48, 48);
+    color: white;
+    background-color:  #00bdcadd;
+}
+.main2 
+button{
+    height: 24px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    cursor:pointer;
+    background: transparent;
+    color:  #00bdcadd;
+}
+.main2 input::placeholder{
+    color:  white;
+}
+.main2 input{
+    color: #00bdcadd;
+}
+.main input::placeholder{
+    color:  white;
+}
+.main input{
+    color: aqua;
+}
+
+.button{
+    height: 50px;
+    width: 140px;
+    border-radius: 40px;
+    position:absolute;
+    left: 700px;
+    bottom: 20px;
+    /* padding: 19px 40px; */
+    background-color: rgb(0, 168, 173);
+}
+.button a{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.button:hover{
+    background-color: blue;
+    border: 2px solid black;
+    -webkit-box-shadow: -1px 1px 15px 5px rgba(0,242,255,1);
+    -moz-box-shadow: -1px 1px 15px 5px rgba(0,242,255,1);
+    box-shadow: -1px 1px 15px 5px rgba(0,242,255,1);
+}
+
+
+    </style>
+
+</head>
+<body>
+    <div class="hold" id="h">
+    <div class="main" id="m">
+        <h1>LOG IN</h1>
+
+        <div class="first_input">
+            <div class="icon1"><i class="fa-solid fa-user" style="color: #01ffffb3;"></i></div>
+            <input type="email" placeholder="Enter your email">
+        </div>
+        <div class="second_input">
+            <div class="icon2"><i class="fa-solid fa-lock" style="color:#01ffffb3;"></i></div>
+            <input type="password" placeholder="password">
+        </div>       
+        <p>Forgot Password?</p>
+
+        <input class="a" type="submit">
+
+        <span>Don't have account? <button onclick="signup()"> Sign Up!</button></span>
+        <!-- <button onclick="document.getElementById('m').style.transform='rotateY(90deg)'"> Sign Up!</button> -->
+    </div>
+<!-- ==================================================================================================== -->
+    <div class="main2" id="m2">
+        <h1>SignUp</h1>
+
+        <div class="third_input">
+            <input type="Text" placeholder="Full Name">
+            <div class="icon1"><i class="fa-regular fa-user" style="color: #00bdcadd;"></i></div>
+        </div>
+        <div class="fourth_input">
+            <input type="email" placeholder="Enter your email">
+            <div class="icon2"><i class="fa-brands fa-google" style="color: #00bdcadd;"></i></div>
+        </div>
+        <div class="fourth_input">
+            <input type="password" placeholder="Generate password">
+            <div class="icon2"><i class="fa-regular fa-eye" style="color: #00bdcadd"></i></div>
+        </div>  
+        <div class="fourth_input">
+            <input type="password" placeholder="Confirm your Password">
+            <div class="icon2"><i class="fa-solid fa-lock" style="color: #00bdcadd;"></i></div>
+        </div>    
+             
+        <input class="a" type="submit" value="Register">
+<span>Already have account? <button onclick="login()">Log In!</button></span>
+
+        <!-- <span>Don't have account? <h4 id="n"> Sign Up!</h4></span> -->
+    </div>
+</div>
+<button class="button"><a href="./index.html">Back</a></button>
+    <!-- ====================================================================================== -->
+    
+
+    <script>
+        function signup(){
+            document.getElementById('m').style ='transform:rotatey(-90deg);opacity:0;transition:1s'
+            document.getElementById('m2').style ='transform:rotatey(0deg);opacity:1; transition:1s;' 
+        }
+
+        function login(){
+            document.getElementById('m').style ='transform:rotatey(0deg);opacity:1;transition:1s'
+            document.getElementById('m2').style ='transform:rotatey(180deg);opacity:0; transition:1s;'    
+        }
+        
+    </script>
+</body>
+</html>
